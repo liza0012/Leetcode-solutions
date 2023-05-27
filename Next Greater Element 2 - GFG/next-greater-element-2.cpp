@@ -15,9 +15,11 @@ class Solution {
           st.pop();
         }
 
-        if (i < N) {
-          if (!st.empty()) nge[i] = st.top();
+        
+        if(i<N){
+            if (!st.empty()) nge[i] = st.top();
         }
+        
         st.push(arr[i%N]);
       }
       return nge;
