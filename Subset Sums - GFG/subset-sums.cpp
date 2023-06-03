@@ -7,7 +7,7 @@ class Solution
 {
 public:
 
-   /* void solve(int i, vector<int> arr, int N, int sum, vector<int> ans){
+   void solve(int i, vector<int> &arr, int N, int sum, vector<int> &ans){
         //base case= reaching end of array
         if(i==N){
             ans.push_back(sum);
@@ -26,8 +26,8 @@ public:
         sort(ans.begin(), ans.end());
         return ans;
         
-    }*/
-    void subsetSumsHelper(int ind, vector < int > & arr, int N, vector < int > & ans, int sum) {
+    }
+    /*void subsetSumsHelper(int ind, vector < int > & arr, int N, vector < int > & ans, int sum) {
       if (ind == N) {
         ans.push_back(sum);
         return;
@@ -42,7 +42,7 @@ public:
     subsetSumsHelper(0, arr, N, ans, 0);
     sort(ans.begin(), ans.end());
     return ans;
-  }
+  }*/
 };
 
 //{ Driver Code Starts.
