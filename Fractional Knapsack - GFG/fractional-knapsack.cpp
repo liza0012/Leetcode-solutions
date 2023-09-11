@@ -22,30 +22,34 @@ class Solution
 {
     public:
     //Function to get the maximum total value in the knapsack.
-    static bool comp(Item a, Item b){
-        double r1= (double)a.value/ (double)a.weight;
-        double r2= (double)b.value/ (double)b.weight;
-        return r1>r2;
-        
-    }
+    // bool static comp(Item a, Item b){
+    //     double r1=(double)a.value/(double)a.weight;
+    //     double r2=(double)a.value/(double)a.weight;
+    //     return r1>r2;
+    // }
+    bool static comp(Item a, Item b) {
+         double r1 = (double) a.value / (double) a.weight;
+         double r2 = (double) b.value / (double) b.weight;
+         return r1 > r2;
+     }
     double fractionalKnapsack(int W, Item arr[], int n)
     {
         // Your code here
-        /*sort(arr, arr+n, comp);
-        int curW=0;
-        double curV=0.0;
-        for(int i=0; i<n; i++){
-            if(curW + arr[i].weight<= W){
-                curW+=arr[i].weight;
-                curV+=arr[i].value;
-            }
-            else{
-                int remain=W-arr[i].weight;
-                curV+=(arr[i].value/ (double)arr[i].weight)*(double)remain;
-                break;
-            }
-        }
-        return curV;*/
+        // sort(arr, arr+n, comp);
+        // int curr=0;
+        // double finalValue=0.0;
+        // for(int i=0; i<n; i++){
+        //     if(curr+arr[i].weight<=W){
+        //         curr+=arr[i].weight;
+        //         finalValue+=arr[i].value;
+                
+        //     }else{
+        //         int remain=W-curr;
+        //         finalValue+=(arr[i].value/(double)arr[i].weight)*(double)remain;
+        //         break;
+        //     }
+        // }
+        // return finalValue;
         sort(arr, arr + n, comp);
 
       int curWeight = 0;
