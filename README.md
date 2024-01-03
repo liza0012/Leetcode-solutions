@@ -1,1 +1,1 @@
-# Leetcode-solutions
+# GFG-solutions
